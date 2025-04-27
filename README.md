@@ -13,10 +13,9 @@ Additionally, it contains the full malware analysis report documenting the resea
 dropper-tracker/
 ├── tool/            # Source code of the Dropper Tracker GUI application
 ├── report/          # Complete malware analysis report
-├── screenshots/     # Tool UI screenshots (optional)
+├── screenshots/     # Tool UI screenshots
 ├── README.md        # Project overview and usage guide
-├── LICENSE          # MIT License (optional)
-└── requirements.txt # Python dependencies (optional)
+└── requirements.txt # Python dependencies 
 ```
 
 ---
