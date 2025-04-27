@@ -86,7 +86,7 @@ python dropper_tracker.py
 - Analyze, search, and export results easily.
 
 ### View the Report:
-- Go to `/report/final_report.docx` for a full walkthrough of the analysis.
+- Go to `/report/final_report.pdf` for a full walkthrough of the analysis.
 
 ---
 
