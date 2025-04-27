@@ -76,14 +76,13 @@ This tool greatly accelerates the investigation of malware behavior by providing
 
 ### Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/dropper-tracker.git
-cd dropper-tracker
+git clone https://github.com/Jawwad08/Zeus-analysis.git
 ```
 
 ### Run the tool:
 ```bash
 cd tool
-python dropper_tracker.py
+python file_dropper_tracker.py
 ```
 
 ### Load Your Logs:
@@ -99,12 +98,15 @@ python dropper_tracker.py
 
 - **File Activity Tab**:  
   View processes dropping files or writing to disk.
+  ![File Activity Tab](screenshots/file_activity_screenshot.png)
 
 - **Registry Modification Tab**:  
   View changes to registry keys like `Run`, `Startup`, etc.
+  ![Registry Modification Tab](screenshots/registry_modifications_screenshot.png)
 
 - **Summary Tab**:  
   Quick overview of which process performed how many file and registry ops.
+  ![Summary Tab](screenshots/summary_screenshot.png)
 
 ---
 
