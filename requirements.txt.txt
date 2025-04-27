@@ -1,0 +1,5 @@
+# GUI framework (built-in with Python, no install needed)
+# Tkinter is part of standard library
+
+# For reading CSV logs and manipulating dataframes
+pandas>=1.3.0
