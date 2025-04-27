@@ -1,5 +1,5 @@
 # Zeus_analysis
-#Dropper Tracker - Malware File & Registry Visualization Tool
+# Dropper Tracker - Malware File & Registry Visualization Tool
 This repository hosts Dropper Tracker, a lightweight Python GUI tool designed to ease malware analysis by visualizing dropped files and registry modifications from Procmon logs.
 Additionally, it contains the full malware analysis report documenting the research process.
 
