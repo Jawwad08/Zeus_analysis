@@ -1,113 +1,112 @@
 # Zeus_analysis
+
 # Dropper Tracker - Malware File & Registry Visualization Tool
-This repository hosts Dropper Tracker, a lightweight Python GUI tool designed to ease malware analysis by visualizing dropped files and registry modifications from Procmon logs.
+
+This repository hosts **Dropper Tracker**, a lightweight Python GUI tool designed to ease malware analysis by visualizing dropped files and registry modifications from Procmon logs.  
 Additionally, it contains the full malware analysis report documenting the research process.
 
-📁 Repository Structure
-bash
-Copy
-Edit
+---
+
+## 📁 Repository Structure
+
+```
 dropper-tracker/
-├── tool/          # Source code of the Dropper Tracker GUI application
-├── report/        # Complete malware analysis report
-├── screenshots/   # Tool UI screenshots (optional)
-├── README.md      # Project overview and usage guide
-├── LICENSE        # MIT License (optional)
+├── tool/            # Source code of the Dropper Tracker GUI application
+├── report/          # Complete malware analysis report
+├── screenshots/     # Tool UI screenshots (optional)
+├── README.md        # Project overview and usage guide
+├── LICENSE          # MIT License (optional)
 └── requirements.txt # Python dependencies (optional)
-📂 File-by-File Significance
-🧰 tool/
-dropper_tracker.py:
-Main Tkinter-based GUI application.
+```
 
-Visualizes file activities (CreateFile, WriteFile) filtered from Procmon logs.
+---
 
-Visualizes registry modifications (RegCreateKey, RegSetValue, etc.) in a separate tab.
+## 📂 File-by-File Significance
 
-Includes search functionality and export to .csv.
+### 🧰 tool/
+- **dropper_tracker.py**:  
+  Main Tkinter-based GUI application.
+  - Visualizes file activities (`CreateFile`, `WriteFile`) filtered from Procmon logs.
+  - Visualizes registry modifications (`RegCreateKey`, `RegSetValue`, etc.) in a separate tab.
+  - Includes search functionality and export to `.csv`.
+  - Displays a summarized table showing the number of file and registry operations per process.
 
-Displays a summarized table showing number of file and registry operations per process.
+### 📄 report/
+- **final_report.docx**:  
+  A complete malware analysis report detailing:
+  - Static Analysis (Strings, Ghidra decompilation)
+  - Dynamic Analysis (Procmon behaviors, Registry traces, Network traffic)
+  - Debugging Observations (API hooks, process injections)
+  - Cleanup Steps & Defensive Recommendations
+  - Screenshots and evidence walkthrough
 
-📄 report/
-final_report.docx:
-A complete malware analysis report detailing:
+### 📸 screenshots/ (optional)
+- **tool_ui.png**:  
+  Visual representation of how the GUI looks after loading data.
 
-Static Analysis (Strings, Ghidra decompilation)
+---
 
-Dynamic Analysis (Procmon behaviors, Registry traces, Network traffic)
+## 🛠️ Tool Overview: Dropper Tracker GUI
 
-Debugging Observations (API hooks, process injections)
-
-Cleanup Steps & Defensive Recommendations
-
-Screenshots and evidence walkthrough
-
-📸 screenshots/
-tool_ui.png (optional): Visual representation of how the GUI looks after loading data.
-
-🛠️ Tool Overview: Dropper Tracker GUI
 This tool greatly accelerates the investigation of malware behavior by providing an easy-to-use interface for:
 
-📂 File Dropper Detection:
+### 📂 File Dropper Detection
+- Extracts file creations/writes/acquires.
+- Excludes noise from system and service processes.
 
-Extracts file creations/writes/acquires.
+### 📝 Registry Modification Detection
+- Captures and filters important registry operations indicative of persistence or configuration tampering.
 
-Excludes noise from system and service processes.
+### 🔍 Search Functionality
+- Allows quick lookup of specific file paths, processes, or registry keys.
 
-📝 Registry Modification Detection:
+### 📊 Summary View
+- Displays a neat count of how many file and registry activities each process performed.
 
-Captures and filters important registry operations indicative of persistence or configuration tampering.
+### 💾 Export Capabilities
+- Save filtered results directly into clean CSV files for reporting or further processing.
 
-🔍 Search Functionality:
+---
 
-Allows quick lookup of specific file paths, processes, or registry keys.
+## 🚀 How to Use
 
-📊 Summary View:
-
-Displays a neat count of how many file and registry activities each process performed.
-
-💾 Export Capabilities:
-
-Save filtered results directly into clean CSV files for reporting or further processing.
-
-🚀 How to Use
-Clone the repository:
-
-bash
-Copy
-Edit
+### Clone the repository:
+```bash
 git clone https://github.com/YOUR_USERNAME/dropper-tracker.git
 cd dropper-tracker
-Run the tool:
+```
 
-bash
-Copy
-Edit
+### Run the tool:
+```bash
 cd tool
 python dropper_tracker.py
-Load Your Logs:
+```
 
-Use the GUI to select a .csv file generated by Procmon (Process Monitor).
+### Load Your Logs:
+- Use the GUI to select a `.csv` file generated by **Procmon (Process Monitor)**.
+- Analyze, search, and export results easily.
 
-Analyze, search, and export results easily.
+### View the Report:
+- Go to `/report/final_report.docx` for a full walkthrough of the analysis.
 
-View the Report:
+---
 
-Go to /report/final_report.docx for a full walkthrough of the analysis.
+## 📋 Example Screenshots
 
-📋 Example Screenshots
-File Activity Tab:
+- **File Activity Tab**:  
+  View processes dropping files or writing to disk.
 
-View processes dropping files or writing to disk.
+- **Registry Modification Tab**:  
+  View changes to registry keys like `Run`, `Startup`, etc.
 
-Registry Modification Tab:
+- **Summary Tab**:  
+  Quick overview of which process performed how many file and registry ops.
 
-View changes to registry keys like Run, Startup, etc.
+> *(Add screenshots inside `/screenshots/` and link them here)*
 
-Summary Tab:
+---
 
-Quick overview of which process performed how many file and registry ops.
+## 📌 Important Notes
+- The tool filters out generic system processes like `procmon64.exe`, `svchost.exe`, and others to reduce noise in the analysis results.
 
-(Add screenshots inside /screenshots/ and link here)
-
-📌 Important Notes
-The tool filters out generic system processes like procmon64.exe, `svchost.exe
+---
