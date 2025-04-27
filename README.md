@@ -14,6 +14,7 @@ dropper-tracker/
 ├── tool/            # Source code of the Dropper Tracker GUI application
 ├── report/          # Complete malware analysis report
 ├── screenshots/     # Tool UI screenshots
+├── malware.pcapng    # pcap file for network analysis
 ├── README.md        # Project overview and usage guide
 └── requirements.txt # Python dependencies 
 ```
@@ -39,9 +40,13 @@ dropper-tracker/
   - Cleanup Steps & Defensive Recommendations
   - Screenshots and evidence walkthrough
 
-### 📸 screenshots/ (optional)
-- **tool_ui.png**:  
-  Visual representation of how the GUI looks after loading data.
+### 📸 screenshots/ 
+- **file_activity_screenshot**:  
+  Visual representation of File activity tab.
+- **registry_modifications_screenshot**:  
+  Visual representation of Registry modifications tab.
+- **summary_screenshot**:  
+  Visual representation of Sumamry tab.
 
 ---
 
@@ -100,8 +105,6 @@ python dropper_tracker.py
 
 - **Summary Tab**:  
   Quick overview of which process performed how many file and registry ops.
-
-> *(Add screenshots inside `/screenshots/` and link them here)*
 
 ---
 
